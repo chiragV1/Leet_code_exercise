@@ -1,3 +1,10 @@
+#include<iostream>
+#include<cstdio>
+#include<vector>
+
+using namespace std;
+
+
 class Solution {
 public:
     vector<vector<int>> generate(int numRows) {
@@ -14,3 +21,23 @@ public:
         return r;
     }
 };
+
+int main(){
+
+    int N;
+    cin>>N;
+
+
+    Solution ob;
+    vector<vector<int>> r = ob.generate(N); 
+
+    for(int i =0;i<N;i++){
+        for(int j=0;j<=i;j++ ){
+            cout<<r[i][j];
+            cout<<" ";
+        }
+        cout<<endl;
+    }
+
+    return 0;
+}
