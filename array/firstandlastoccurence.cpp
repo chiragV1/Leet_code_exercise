@@ -7,6 +7,7 @@ class solution{
       int first(int arr[], int key ){
           int s=0;
           int e  = 5;
+           int mid = s + (e-s)/2;
           int ans =-1;
           while(s<=e){
               int mid = s + (e-s)/2;
@@ -20,6 +21,7 @@ class solution{
               else{
                   s = mid+1;
               }
+              mid = s + (e-s)/2;
           }
 
           return ans;
@@ -31,7 +33,7 @@ class solution{
 
 int main(){
 
-    int  arr[6] ={1,2,3,3,4,5,};
+    int  arr[6] ={1,2,3,3,4,5};
     int key ;
     cin>>key;
     solution ob;
